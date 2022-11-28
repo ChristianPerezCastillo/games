@@ -1,0 +1,167 @@
+<html>
+
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jahid Khan">
+    <link rel="stylesheet" href="Chess.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>Life</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <script src="app.js">
+    </script>
+  </head>
+  <style>
+    ion-icon {
+      height: 1rem;
+      width: 1rem;
+    }
+  </style> 
+  
+  <body onload='inicializa();'>
+    <div class="modal fade" id="miModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            
+          <h5 class="modal-title" id="modalTitle">Bienvenido a mi sitio de juegos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Esta es una Aplicacion progresiva, puedes intalar la aplicacion en tu computadora y poder trabajar con ella sin necesidad de estar conectado a la red.</p>
+          </div>
+          <div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+  <a id="instalar" href="" class="btn btn-primary">Intalar aplicacion</a>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <canvas id='pantalla' style='border:1px solid #000000'></canvas>
+          <br>
+          <h2>Este juego es de 0 JUGADORES!</h2>
+          <span><b>Este es el juego de la vida.</b></span>
+          <p>
+            El Juego de la vida es un autómata celular diseñado por el matemático británico John Horton Conway en 1970. Es un juego de cero jugadores, en el que su evolución es determinada por un estado inicial, sin requerir intervención adicional. Se considera un sistema Turing completo que puede simular cualquier otra Máquina de Turing.
+
+Desde su publicación, ha atraído mucho interés debido a la gran variabilidad de la evolución de los patrones. Se considera que el Juego de la vida es un buen ejemplo de emergencia y autoorganización. Es interesante para científicos, matemáticos, economistas y otros observar cómo patrones complejos pueden provenir de la implementación de reglas muy sencillas.
+
+El Juego de la vida tiene una variedad de patrones reconocidos que provienen de determinadas posiciones iniciales. Poco después de la publicación, se descubrieron el pentaminó R, el planeador o caminador (en inglés, glider, conjunto de células que se desplazan) y el explosionador (células que parecen formar la onda expansiva de una explosión), lo que atrajo un mayor interés hacia el juego. Contribuyó a su popularidad el hecho de que se publicó justo cuando se estaba lanzando al mercado una nueva generación de miniordenadores baratos, lo que significaba que se podía jugar durante horas en máquinas que, por otro lado, no se utilizarían por la noche.
+
+Para muchos aficionados, el juego de la vida solo era un desafío de programación y una manera divertida de usar ciclos de la CPU.1​ Para otros, sin embargo, el juego adquirió más connotaciones filosóficas.
+          </p>
+        </div>
+        <div class="col-6">
+          <div class="row text-center">
+            <div class="col-12">
+              
+        </div>
+          </div>
+          <div class="row">
+            <div class="col m-4 p-3">
+              <div class="card" style="width: 18rem;">
+                <img src="img/chess.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Juega Ajedrez</h5>
+                  <p class="card-text"></p>
+                  <a href="chess.html" class="btn btn-primary"><ion-icon name="logo-game-controller-b"></ion-icon>Jugar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col m-4 p-2">
+              <div class="card" style="width: 18rem;">
+                <img src="img/treasuremap.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Busca el tesoro</h5>
+                  <a href="findTreasure.html" class="btn btn-primary"><ion-icon name="logo-game-controller-b"></ion-icon>Jugar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src='js/juego.js'></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="text/javascript">
+      /*$(document).ready(function(){
+        setTimeout(function(){
+          $("#miModal").modal('show');
+        }, 1000);
+      });*/
+    </script>
+  <script>
+    let eventoPrompt;
+    /*let coockieInstall = "";
+    let content = document.getElementById('miModal');
+
+
+    window.addEventListener("DOMContentLoaded", () => {
+      
+      if(getCookie("install") == "true"){
+        console.log("Si entre eres una verga");
+        content.style.display="none";
+      }else{
+        console.log("echale huevos");
+        console.log(getCookie("install"));
+      }
+    });
+
+    window.addEventListener('appinstalled', ()=>{
+      $('#miModal').modal('closed');
+      document.cookie = "install=true";
+      eventoPrompt = null;
+    })
+*/
+document.addEventListener('DOMContentLoaded', () => {
+// Comprueba si en el pasado el usuario ha marcado una opción
+
+    if (!localStorage.getItem('cookies-aceptadas')) {
+        // Todavía no ha aceptado o denegado cookies
+        $('#miModal').modal('show');
+    }
+  });
+
+    window.addEventListener('beforeinstallprompt', function(e){
+      e.preventDefault();
+      eventoPrompt = e;
+    });
+
+    btnInstalar = document.getElementById("instalar");
+
+    btnInstalar.addEventListener('click', (e)=>{
+      eventoPrompt.prompt();  
+      localStorage.setItem('cookies-aceptadas', true);
+      eventoPrompt.userChoice.then((choiceResult)=>{
+        if(choiceResult.outcome==='accepted'){
+          console.log('El usuario instalo la app');
+        }else {
+          console.log('El usuario rechazo la instalacion');
+        }
+        eventoPrompt=null;
+      });
+    });
+
+    /*function getCookie(instalar){
+      var name = instalar + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++){
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if(c.indexOf(name) == 0) return unescape(c.substring(name.length, c.length));
+      }
+      return "";
+    }*/
+  </script>
+  </body>
+</html>
